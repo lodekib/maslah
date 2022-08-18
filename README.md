@@ -1,0 +1,5 @@
+- [x] Layout for the website.
+- [x] `Contact page`.
+- [x] `About` us.
+- [x] Units for sale in details.
+- [x] Whatsapp `api intergration`.
