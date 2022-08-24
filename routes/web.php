@@ -29,7 +29,6 @@ Route::controller(UnitController::class)->group(function(){
     Route::get('/details/{id}','details')->name('details');
     Route::get('/properties/all','properties')->name('properties.all');
     Route::get('/home','home')->name('home');
-
 });
 
 
@@ -43,4 +42,7 @@ Route::controller(PropertyController::class)->group(function(){
 Route::controller(PageController::class)->group(function(){
     Route::get('/about','about')->name('about');
     Route::get('/contact','contact')->name('contact');
+    Route::get('/more/units','more')->name('more');
+    Route::post('/search','search')->name('search');
+
 });

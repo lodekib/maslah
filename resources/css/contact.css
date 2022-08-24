@@ -1,5 +1,4 @@
 /* Google Font CDN Link */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
   margin: 0;
   padding: 0;
@@ -39,7 +38,7 @@
   right: -15px;
   top: 50%;
   transform: translateY(-50%);
-  background: #009e60;
+  background: #0f3a53;
 }
 .content .left-side .details{
   margin: 14px;
@@ -47,7 +46,7 @@
 }
 .content .left-side .details i{
   font-size: 30px;
-  color: #009e60;
+  color: #0f3a53;
   margin-bottom: 10px;
 }
 .content .left-side .details .topic{
@@ -66,8 +65,8 @@
 .content .right-side .topic-text{
   font-size: 23px;
   font-weight: 600;
-  color: #009e60;
-  border-left: 5px solid #009e60;
+  color: #0f3a53;
+  border-left: 5px solid #0f3a53;
   padding-left: 10px;
   margin-bottom: 20px;
 }
@@ -105,12 +104,12 @@
   border: none;
   padding: 8px 16px;
   border-radius: 6px;
-  background: #009e60;
+  background: #0f3a53;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 .button input[type="button"]:hover{
-  background: #009e60;
+  background: #0f3a53;
 }
 
 @media (max-width: 950px) {

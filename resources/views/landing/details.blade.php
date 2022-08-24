@@ -33,7 +33,7 @@
                         <h6>Overview</h6><hr>
                         <div class="row">
                             <div class="p-list">
-                                <strong>Price : <span class="text-success">{{ $property->price }} M</span></strong>
+                                <strong>Price : <span class="text-success">$ {{ $property->price }} </span></strong>
                             </div>
                             <div class="p-list">
                                 <strong>Size :</strong> <span class="text-seecondary">{{ $property->size }} square ft.</span>

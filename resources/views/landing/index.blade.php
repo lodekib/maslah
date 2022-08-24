@@ -3,21 +3,23 @@
     <!-- find section -->
     <section class="find_section ">
         <div class="container">
-            <form action="">
+            <form action={{ route('search') }} method="POST">
+                @csrf
                 <div class="form-row">
                     <div class="col-md-5">
-                        <select type="text" class="form-control" placeholder="Price range ">
+                        <select type="text" class="form-control" name="search_bedroom" placeholder="--number of bedrooms-- " required>
                             <option value="">--Select type--</option>
-                            <option value="">4 Bedroom</option>
-                            <option value="">3 Bedroom</option>
-                            <option value="">2 Bedroom</option>
+                            <option value="4">4 Bedroom</option>
+                            <option value="3">3 Bedroom</option>
+                            <option value="2">2 Bedroom</option>
                         </select>
                     </div>
                     <div class="col-md-5">
-                        <select type="text" class="form-control" placeholder="Price range ">
+                        <select type="text" class="form-control" name="search_price" placeholder="--price range--" required>
                             <option value="">--Select price range--</option>
-                            <option value="">Price 1</option>
-                            <option value="">Price 2</option>
+                            <option value="0-50000">{{ number_format(0) }} - $ {{ number_format(50000) }}</option>
+                            <option value="51000-100000">$ {{ number_format(51000) }} - $ {{ number_format(100000) }}</option>
+                            <option value="100001">Above  $ {{ number_format(100000) }}</option>
                         </select>
                     </div>
                     <div class="col-md-2">
@@ -83,6 +85,7 @@
                             <i class="fa fa-arrow-right"></i>
                         </a>
                     </div>
+            @if(count($properties) > 0)
             <div class="sale_container">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
                     <div class="carousel-inner">
@@ -100,7 +103,7 @@
                                     <div class="card__body">
                                         <div class="row ml-1 justify-content-between">
                                             <span class="tag tag-blue">{{ $property->bedrooms }} Bedrooms</span>
-                                            <span class="text-success mr-1"><strong>KSH. {{ $property->price }} M</strong></span>
+                                            <span class="text-success mr-1"><strong>$ {{ number_format($property->price )}} </strong></span>
 
                                         </div>
                                         <p>{{ $property->description }}</p>
@@ -128,7 +131,7 @@
                                                 <div class="card__body">
                                                     <div class="row ml-1 justify-content-between">
                                                         <span class="tag tag-blue">{{ $property->bedrooms }} Bedrooms</span>
-                                                        <span class="text-success mr-1"><strong>KSH. {{ $property->price }} M</strong></span>
+                                                        <span class="text-success mr-1"><strong> $ {{ number_format($property->price )}} </strong></span>
 
                                                     </div>
                                                     <p>{{ $property->description }}</p>
@@ -159,7 +162,7 @@
                                     <div class="card__body">
                                         <div class="row ml-1 justify-content-between">
                                             <span class="tag tag-blue">{{ $prop->bedrooms }} Bedrooms</span>
-                                            <span class="text-success mr-1"><strong>KSH. {{ $prop->price }} M</strong></span>
+                                            <span class="text-success mr-1"><strong>$ {{ number_format($prop->price )}} </strong></span>
 
                                         </div>
                                         <p>{{ $prop->description }}</p>
@@ -184,10 +187,15 @@
 
             </div>
             <div class="btn-box">
-                <a href="">
+                <a href={{ route('more') }}>
                     Find More
                 </a>
             </div>
+            @else
+                <div class="alert alert-info">
+                    No units at the moment...
+                </div>
+            @endif
         </div>
     </section>
 
