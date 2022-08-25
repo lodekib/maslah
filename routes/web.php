@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NotificationController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UnitController;
 use App\Http\Controllers\PropertyController;
@@ -46,3 +47,6 @@ Route::controller(PageController::class)->group(function(){
     Route::post('/search','search')->name('search');
 
 });
+
+Route::get('/send-notification',[NotificationController::class,'sendNotification']);
+

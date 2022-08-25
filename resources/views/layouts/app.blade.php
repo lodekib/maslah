@@ -77,6 +77,11 @@
                     </a>
                 </li>
                 <li>
+                    <a class="s-sidebar__nav-link" href={{ route('properties.all') }}>
+                        <i class="fas fa-bell"></i><em>Notifications</em>
+                    </a>
+                </li>
+                <li>
                         <a class="s-sidebar__nav-link" href="{{ route('logout') }}"
                            onclick="event.preventDefault();
                                      document.getElementById('logout-form').submit();">
