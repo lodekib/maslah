@@ -9,20 +9,20 @@ use Illuminate\Support\Facades\Notification;
 
 class NotificationController extends Controller
 {
-    public function sendNotification(){
+    public function sendNotification(Request $request){
+
         $user = User::first();
 
-        $contactusData = [
-            'name' => 'Order Name',
-            'body' => 'You received an order.',
-            'thanks' => 'Thank you',
-            'orderText' => 'Check out the order',
-            'orderUrl' => url('/'),
-            'order_id' => 006
-        ];
+        $contactusData = $request->all();
 
-        Notification::send($user,new ContactUsNotification($contactusData));
-        dd('Task Completed');
+        if(Notification::send($user,new ContactUsNotification($contactusData))){
+            return back()->with('success','Message sent successfully');
+
+        }else{
+            return back()->with('error','Unable to send your message');
+
+        }
+
 
     }
 }

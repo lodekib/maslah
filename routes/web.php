@@ -48,5 +48,5 @@ Route::controller(PageController::class)->group(function(){
 
 });
 
-Route::get('/send-notification',[NotificationController::class,'sendNotification']);
+Route::post('/send-notification',[NotificationController::class,'sendNotification'])->name('notification');
 

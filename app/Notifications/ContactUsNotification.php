@@ -43,7 +43,10 @@ class ContactUsNotification extends Notification
     public function toArray($notifiable)
     {
         return [
-            'order_id' => $this->contactusData['order_id']
+            'name' => $this->contactusData['name'],
+            'phone' => $this->contactusData['phone'],
+            'email' => $this->contactusData['email'],
+            'message' => $this->contactusData['message']
         ];
     }
 }

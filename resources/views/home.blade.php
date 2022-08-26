@@ -73,6 +73,35 @@
                     </div>
                 </div>
             </div>
+            <h6 class="mt-5">Notifications</h6>
+            <table class="table table-hover">
+                <thead>
+                <tr>
+                    <th scope="col"><small></small></th>
+                    <th scope="col"><small>Sender Email</small></th>
+                    <th scope="col"><small>Sender Phone</small></th>
+                    <th scope="col"><small>Message</small></th>
+                </tr>
+                </thead>
+                <tbody>
+            @foreach(Auth::user()->unreadNotifications as $notification)
+                <tr>
+                    <td><small><i class="fas fa-circle-notch text-success"></i></small></td>
+                    <td><small>{{ $notification->data['email'] }}</small></td>
+                    <td><small>{{ $notification->data['phone'] }}</small></td>
+                    <td><small>{{ $notification->data['message'] }}</small></td>
+                </tr>
+            @endforeach
+
+                </tbody>
+            </table>
+
+
+{{--                @foreach(Auth::user()->unreadNotifications as $notification)--}}
+{{--                    <div class="bg-danger d-flex">{{ $notification->data['sender_message'] }}</div>--}}
+{{--                @endforeach--}}
         </section>
     </div>
+
+
 @endsection

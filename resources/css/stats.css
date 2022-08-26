@@ -1,0 +1,78 @@
+.stats {
+    margin: 5px;
+}
+.stats .col {
+    margin: 0px;
+    padding: 3px;
+}
+.statContainer {
+    margin: 5px;
+    width: 100%;
+    font-size: 13px;
+    border-radius: 3px;
+    background-color: #fff;
+    padding: 0;
+    overflow: hidden;
+}
+.statContainer .title {
+    padding: 5px 10px;
+    color: #fff;
+}
+.statContainer.blue .title {
+    background-color: #2d72c0;
+}
+.statContainer.blue .status {
+    color: #1f8207;
+}
+
+.statContainer.yellow .title {
+    background-color: #f3a254;
+}
+.statContainer.yellow .status {
+    color: #1f8207;
+}
+
+.statContainer.fountainBlue .title {
+    background-color: #6abebf;
+}
+.statContainer.fountainBlue .status {
+    color: #1f8207;
+}
+
+.statContainer.lightBlue .title {
+    background-color: #52a1e5;
+}
+.statContainer.lightBlue .status {
+    color: #52a1e5;
+}
+
+
+
+
+.statContainer.orange .title {
+    background-color: #ff7043;
+}
+.statContainer.orange .status {
+    color: #ff7043;
+}
+@media (max-width: 1200px) {
+    .stats .col {
+        min-width: 20% !important;
+    }
+}
+
+@media (max-width: 887px) {
+    .stats .col {
+        min-width: 25% !important;
+    }
+}
+@media (max-width: 768px) {
+    .stats .col {
+        min-width: 50% !important;
+    }
+}
+@media (max-width: 525px) {
+    .stats .col {
+        min-width: 100% !important;
+    }
+}

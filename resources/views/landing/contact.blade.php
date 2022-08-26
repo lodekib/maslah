@@ -1,5 +1,12 @@
 @extends('landing.landing')
 @section('content')
+
+    @if(session()->has('success'))
+        <div class="alert alert-success col-4 mt-3">{{ session('success') }}</div>
+        @endif
+    @if(session()->has('error'))
+        <div class="alert alert-danger col-4 mt-3">{{ session('error') }}</div>
+    @endif
     <div class="contact_container">
         <div class="content">
             <div class="left-side">
@@ -25,15 +32,16 @@
             <div class="right-side">
                 <div class="topic-text">Message Us</div>
                 <p>Having any inquiries ? Don't hesitate to contact us.</p>
-                <form action="#">
+                <form action={{ route('notification') }} method='POST'>
+                    @csrf
                     <div class="input-box">
-                        <input type="text" placeholder="Name" required>
+                        <input type="text" placeholder="Name" name="name" required>
                     </div>
                     <div class="input-box">
-                        <input type="tel" placeholder="Phone Number" required>
+                        <input type="tel" placeholder="Phone Number" name="phone" required>
                     </div>
                     <div class="input-box">
-                        <input type="email" placeholder="Email Address" required>
+                        <input type="email" placeholder="Email Address" name="email" required>
                     </div>
                     <div class="input-box message-box">
                         <textarea name="message" id="message" cols="30" rows="10" placeholder="Your message..." required></textarea>
