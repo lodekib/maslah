@@ -67,6 +67,60 @@
         </div>
     </section>
 
+    <!-- end about section -->
+
+    <!-- features sections -->
+    <section class="features_section">
+        <div class="heading_container">
+            <h2>Features</h2>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm feature_div">
+                    <div class="card">
+
+                        <div class="card-body">
+                      <ul class="m-2">
+                          <li>Spacious Lounge</li>
+                          <li>Bedrooms with inbuilt wardrobe.</li>
+                          <li>Kitchen fitted with granite</li>
+                          <li>Backup power supply.</li>
+                      </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm feature_div">
+                    <div class="card">
+
+                        <div class="card-body">
+                          <ul class="m-2">
+                              <li>Two high speed elevators.</li>
+                              <li>Ample paarking lots.</li>
+                              <li>Garden and kids playground.</li>
+                              <li>Water flow throughout</li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm feature_div">
+                    <div class="card">
+                        <div class="card-body">
+                          <ul class="m-2">
+                             <li>24-hours CCTV security surveillance.</li>
+                              <li>Walk in closet.</li>
+                              <li>Air Conditioners.</li>
+                              <li>Shops are also available.</li>
+                          </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
     <!-- sale section -->
 
     <section class="sale_section layout_padding-bottom">
