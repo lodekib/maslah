@@ -49,4 +49,8 @@ class ContactUsNotification extends Notification
             'message' => $this->contactusData['message']
         ];
     }
+
+
+
+
 }
