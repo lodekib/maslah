@@ -25,4 +25,24 @@ class PageController extends Controller
 
       return view('landing.index',compact('properties'));
   }
+
+  public function development(){
+      return view('landing.services.development');
+  }
+  public function buysell(){
+      return view('landing.services.buysell');
+
+}
+public function manage(){
+      return view('landing.services.managing');
+}
+public function venture(){
+      return view('landing.services.jointventure');
+}
+public function valuation(){
+ return view('landing.services.valuation');
+}
+public function tenancy(){
+      return view('landing.services.tenancy');
+}
 }

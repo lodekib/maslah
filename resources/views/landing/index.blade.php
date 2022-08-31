@@ -1,5 +1,8 @@
 @extends('landing.landing')
 @section('content')
+    @push('styles')
+      @vite(['resources/css/services.css'])
+        @endpush
     <!-- find section -->
     <section class="find_section ">
         <div class="container">
@@ -43,19 +46,20 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="detail-box">
-                        <div class="heading_container">
-                            <h2>
-                                Know About Us
-                            </h2>
+                        <div class="section_title text-center">
+                            <h2>About Us</h2>
+                            <div class="brand_border">
+                                <i class="fa fa-minus" aria-hidden="true"></i>
+                                <i class="fas fa-handshake"></i>
+                                <i class="fa fa-minus" aria-hidden="true"></i>
+                            </div>
                         </div>
                         <p>
                             Maecenas ac leo eu dui tincidunt tincidunt. Aliquam dignissim
                             est non quam ultricies ultrices. Sed a fringilla lacus. Quisque rutrum faucibus
                             ex nec porttitor. Nulla a pretium nibh. Ut tempor risus ac scelerisque faucibus.
                             Nulla posuere enim luctus porttitor condimentum. Morbi rhoncus metus aliquam
-                            condimentum tempus. Praesent porta magna in est tempor, vel molestie magna tincidunt.
-                            Aliquam porta eros et odio facilisis, sed tempus augue commodo. Vestibulum laoreet tincidunt
-                            ex, ut ornare lacus. Suspendisse fringilla odio nec
+                            condimentum tempus.
                             fringilla cursus. Integer luctus mi cursus erat mollis, vel ornare odio mattis.
                         </p>
                         <a href={{ route('about') }}>
@@ -71,8 +75,13 @@
 
     <!-- features sections -->
     <section class="features_section">
-        <div class="heading_container">
+        <div class="section_title text-center">
             <h2>Features</h2>
+            <div class="brand_border">
+                <i class="fa fa-minus" aria-hidden="true"></i>
+                <i class="fas fa-handshake"></i>
+                <i class="fa fa-minus" aria-hidden="true"></i>
+            </div>
         </div>
         <div class="container">
             <div class="row">
@@ -91,7 +100,6 @@
                 </div>
                 <div class="col-sm feature_div">
                     <div class="card">
-
                         <div class="card-body">
                           <ul class="m-2">
                               <li>Two high speed elevators.</li>
@@ -118,6 +126,132 @@
         </div>
 
     </section>
+
+    <!-- services -->
+    <section id="service" class="service">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section_title text-center">
+                        <h2>Our Services</h2>
+                        <div class="brand_border">
+                            <i class="fa fa-minus" aria-hidden="true"></i>
+                            <i class="fas fa-handshake"></i>
+                            <i class="fa fa-minus" aria-hidden="true"></i>
+                        </div>
+                        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. <br>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!--START SINGLE SERVICE AREA-->
+                <div class="col-md-6 col-lg-4 col-sm-12">
+                    <div class="single_service hvr-curl-top-right">
+                        <div class="single_service-left">
+                            <div class="icon">
+                                <i class="fa fa-laptop"></i>
+                            </div>
+                        </div>
+                        <div class="single_service-body">
+                            <h4 class="single_service-heading">Development</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing   elit. Aenean commodo ligula.</p>
+      <a href="{{ route('development') }}">
+          <button class="btn btn-outline-dark">View Service</button>
+      </a>
+                        </div>
+                    </div>
+                </div><!--/END SINGLE SERVICE AREA-->
+                <!--START SINGLE SERVICE AREA-->
+                <div class="col-md-6 col-lg-4 col-sm-12">
+                    <div class="single_service hvr-curl-top-right">
+                        <div class="single_service-left">
+                            <div class="icon">
+                                <i class="fas fa-quidditch"></i>
+                            </div>
+                        </div>
+                        <div class="single_service-body">
+                            <h4 class="single_service-heading">Buy and Sell</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                            <a href="{{ route('buy.sell') }}">
+                                <button class="btn btn-outline-dark">View Service</button>
+                            </a>
+                        </div>
+                    </div>
+                </div><!--/END SINGLE SERVICE AREA-->
+                <!--START SINGLE SERVICE AREA-->
+                <div class="col-md-6 col-lg-4 col-sm-12">
+                    <div class="single_service hvr-curl-top-right">
+                        <div class="single_service-left">
+                            <div class="icon">
+                                <i class="fas fa-newspaper"></i>
+                            </div>
+                        </div>
+                        <div class="single_service-body">
+                            <h4 class="single_service-heading">Managing</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscin     elit. Aenean commodo ligula.</p>
+                            <a href="{{ route('management') }}">
+                                <button class="btn btn-outline-dark">View Service</button>
+                            </a>
+                        </div>
+                    </div>
+                </div><!--/END SINGLE SERVICE AREA-->
+                <!--START SINGLE SERVICE AREA-->
+                <div class="col-md-6 col-lg-4 col-sm-12">
+                    <div class="single_service hvr-curl-top-right">
+                        <div class="single_service-left">
+                            <div class="icon">
+                                <i class="fas fa-smile"></i>
+                            </div>
+                        </div>
+                        <div class="single_service-body">
+                            <h4 class="single_service-heading">Joint Venture</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing   elit. Aenean commodo ligula.</p>
+                            <a href="{{ route('joint.venture') }}">
+                                <button class="btn btn-outline-dark">View Service</button>
+                            </a>
+                        </div>
+                    </div>
+                </div><!--/END SINGLE SERVICE AREA-->
+                <!--START SINGLE SERVICE AREA-->
+                <div class="col-md-6 col-lg-4 col-sm-12">
+                    <div class="single_service hvr-curl-top-right">
+                        <div class="single_service-left">
+                            <div class="icon">
+                                <i class="fa fa-crop"></i>
+                            </div>
+                        </div>
+                        <div class="single_service-body">
+                            <h4 class="single_service-heading">Valuation</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula.</p>
+                            <a href="{{ route('valuation') }}">
+                                <button class="btn btn-outline-dark">View Service</button>
+                            </a>
+                        </div>
+                    </div>
+                </div><!--/END SINGLE SERVICE AREA-->
+                <!--START SINGLE SERVICE AREA-->
+                <div class="col-md-6 col-lg-4 col-sm-12">
+                    <div class="single_service hvr-curl-top-right">
+                        <div class="single_service-left">
+                            <div class="icon">
+                                <i class="fa fa-cogs"></i>
+                            </div>
+                        </div>
+                        <div class="single_service-body">
+                            <h4 class="single_service-heading">Tenancy</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing     elit. Aenean commodo ligula.</p>
+                            <a href="{{ route('tenancy') }}">
+                                <button class="btn btn-outline-dark">View Service</button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--/END SINGLE SERVICE AREA-->
+            </div>
+        </div>
+    </section>
+
+    <!--/END SERVICE AREA-->
 
 
 

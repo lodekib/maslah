@@ -46,6 +46,13 @@ Route::controller(PageController::class)->group(function(){
     Route::get('/more/units','more')->name('more');
     Route::post('/search','search')->name('search');
 
+    Route::get('/development','development')->name('development');
+    Route::get('/buy/sell','buysell')->name('buy.sell');
+    Route::get('/management','manage')->name('management');
+    Route::get('/joint/venture','venture')->name('joint.venture');
+    Route::get('/valuation','valuation')->name('valuation');
+    Route::get('/tenancy','tenancy')->name('tenancy');
+
 });
 
 Route::post('/send-notification',[NotificationController::class,'sendNotification'])->name('notification');

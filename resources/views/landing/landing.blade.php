@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
 
     @vite(['resources/css/app.css', 'resources/css/responsive.css','resources/css/houses.css','resources/css/contact.css','resources/css/about.css','resources/css/description.css','resources/css/more.css'])
-
+@stack('styles')
     <style>
         body {
             font-family: 'Nunito', sans-serif;
