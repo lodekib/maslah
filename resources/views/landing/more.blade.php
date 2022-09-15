@@ -1,9 +1,15 @@
 @extends('landing.landing')
 @section('content')
-    <div class="heading_container">
-        <h2 style="margin-top: 60px">
-           All Units
-        </h2>
+    @push('styles')
+        @vite(['resources/css/services.css'])
+    @endpush
+    <div class="section_title text-center mt-5">
+        <h2>Apartments</h2>
+        <div class="brand_border">
+            <i class="fa fa-minus" aria-hidden="true"></i>
+            <i class="fas fa-handshake"></i>
+            <i class="fa fa-minus" aria-hidden="true"></i>
+        </div>
     </div>
         <div class="sale_container">
             <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
@@ -43,6 +49,8 @@
                 </div>
 
             </div>
-            {{ $data->links() }}
+            <div class="mb-5 ms-5">
+                {{ $data->links() }}
+            </div>
         </div>
 @endsection

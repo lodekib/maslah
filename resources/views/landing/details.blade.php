@@ -1,9 +1,17 @@
 @extends('landing.landing')
 @section('content')
+    @push('styles')
+        @vite(['resources/css/services.css'])
+    @endpush
     <section id="services" class="services section-bg">
         <div class="container-fluid">
-            <div class="col-sm-12 text-center mb-4">
-                <h1>{{ $property->bedrooms }} Bedroom Unit</h1>
+            <div class="section_title text-center">
+                <h2>{{ $property->bedrooms }} Bedroom Apartment</h2>
+                <div class="brand_border">
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                    <i class="fas fa-handshake"></i>
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="row row-sm">
                 <div class="col-md-12 _boxzoom">
@@ -25,7 +33,7 @@
         </div>
         <div class="col-md-12">
             <div class="_product-detail-content">
-                <p class="_p-name"> Maslah Suites - {{$property->bedrooms}}Bedroom </p>
+                <p class="_p-name"> Maslah Suites - {{$property->property_name}} </p>
                 <div class="_p-price-box">
 
 

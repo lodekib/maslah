@@ -1,20 +1,22 @@
 @extends('landing.landing')
 @section('content')
-    <section class="about_section layout_padding-bottom">
+    @push('styles')
+        @vite(['resources/css/services.css'])
+    @endpush
+    <section class="about_section">
 
         <div class="container">
-            <div class="heading_container">
-                <h2>
-                    About Us
-                </h2>
+            <div class="section_title text-center mt-15">
+                <h2>Know us </h2>
+                <div class="brand_border">
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                    <i class="fas fa-handshake"></i>
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="row">
-                <div class="col-md-7">
-                    <div class="img-box">
-                        <img src="../images/2-bedroom4.jpg" alt="" style="border-radius: 5px">
-                    </div>
-                </div>
-                <div class="col-md-5">
+
+                <div class="col-md-12">
                     <div class="detail-box">
 
                         <p>
@@ -36,39 +38,47 @@
     </section>
 
 
-    <div class="heading_container about_heading">
-        <h2 class="">
-            What we Do
-        </h2>
+    <div class="section_title text-center">
+        <h2>What we do</h2>
+        <div class="brand_border">
+            <i class="fa fa-minus" aria-hidden="true"></i>
+            <i class="fas fa-handshake"></i>
+            <i class="fa fa-minus" aria-hidden="true"></i>
+        </div>
     </div>
 
     <div class="row1-container">
         <div class="service-box box-down cyan">
-            <h2><small>Property sales</small></h2>
+            <h5><small>Buying & Selling</small></h5>
             <p>We sell variety of housing property ranging from commercial to residential.</p>
         </div>
 
         <div class="service-box red">
-            <h2><small>Property Management</small> </h2>
+            <h5><small>Management</small> </h5>
             <p>We manage property with value-creation mindset.</p>
         </div>
 
         <div class="service-box box-down blue">
-            <h2><small>Property Consultancy</small></h2>
+            <h5><small>Tenancy</small></h5>
             <p>We provide credible opinions that adhere to IVS.</p>
         </div>
+
     </div>
     <div class="row2-container">
         <div class="service-box orange">
-            <h2>Karma</h2>
+            <h5><small>Joint Venture</small></h5>
             <p>Regularly evaluates our talent to ensure quality</p>
         </div>
+
     </div>
 
-    <div class="heading_container about_heading">
-        <h2 class="mt-5">
-            Management Team
-        </h2>
+    <div class="section_title text-center">
+        <h2>Management team</h2>
+        <div class="brand_border">
+            <i class="fa fa-minus" aria-hidden="true"></i>
+            <i class="fas fa-handshake"></i>
+            <i class="fa fa-minus" aria-hidden="true"></i>
+        </div>
     </div>
 
 
@@ -81,8 +91,9 @@
                             <img src="https://i.ibb.co/8x9xK4H/team.jpg">
                         </div>
                         <div class="team-content">
-                            <h3 class="title">Manager</h3>
-                            <span class="post">Mucaad Abdi</span>
+                            <h3 class="title">Director</h3>
+                            <span class="post">Gulleid Kunow Mursal</span>
+                            <span>+254710455296</span>
                         </div>
                         <ul class="social">
                             <li>
@@ -107,8 +118,9 @@
                             <img src="https://i.ibb.co/8x9xK4H/team.jpg">
                         </div>
                         <div class="team-content">
-                            <h3 class="title">Assistant Manager</h3>
-                            <span class="post">Abdiaziz Abdishakir</span>
+                            <h3 class="title">Assistant Director</h3>
+                            <span class="post">Najma Gulleid Kunow</span>
+                            <span>+254715054422</span>
                         </div>
                         <ul class="social">
                             <li>
@@ -132,8 +144,9 @@
                             <img src="https://i.ibb.co/8x9xK4H/team.jpg">
                         </div>
                         <div class="team-content">
-                            <h3 class="title">Sales Officer</h3>
-                            <span class="post">Abdullahi Yusuf </span>
+                            <h3 class="title">Sales Manager</h3>
+                            <span class="post">Abdullahi M Yusuf </span>
+                            <span>+254725498684</span>
                         </div>
                         <ul class="social">
                             <li>

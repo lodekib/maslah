@@ -259,10 +259,13 @@
 
     <section class="sale_section layout_padding-bottom">
         <div class="container-fluid">
-            <div class="heading_container">
-                <h2>
-                    Trending Units
-                </h2>
+            <div class="section_title text-center">
+                <h2>Trending Units</h2>
+                <div class="brand_border">
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                    <i class="fas fa-handshake"></i>
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                </div>
             </div>
 
             <div class="col-12 text-right">
@@ -394,10 +397,13 @@
 
     <section class="client_section layout_padding">
         <div class="container-fluid">
-            <div class="heading_container">
-                <h2>
-                    Customer Testimonials
-                </h2>
+            <div class="section_title text-center">
+                <h2>Testionials</h2>
+                <div class="brand_border">
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                    <i class="fas fa-handshake"></i>
+                    <i class="fa fa-minus" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="client_container">
                 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">

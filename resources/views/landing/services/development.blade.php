@@ -3,7 +3,7 @@
     @push('styles')
         @vite(['resources/css/services.css'])
     @endpush
-    <div class="section_title text-center">
+    <div class="section_title text-center mt-5">
         <h2>Development</h2>
         <div class="brand_border">
             <i class="fa fa-minus" aria-hidden="true"></i>

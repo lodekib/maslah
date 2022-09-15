@@ -1,5 +1,8 @@
 @extends('landing.landing')
 @section('content')
+    @push('styles')
+        @vite(['resources/css/services.css'])
+    @endpush
 
     @if(session()->has('success'))
         <div class="alert alert-success col-4 mt-3">{{ session('success') }}</div>
@@ -30,8 +33,14 @@
                 </div>
             </div>
             <div class="right-side">
-                <div class="topic-text">Message Us</div>
-                <p>Having any inquiries ? Don't hesitate to contact us.</p>
+                <div class="section_title text-center">
+                    <h2>Message Us</h2>
+                    <div class="brand_border">
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                        <i class="fas fa-handshake"></i>
+                        <i class="fa fa-minus" aria-hidden="true"></i>
+                    </div>
+                </div>
                 <form action={{ route('notification') }} method='POST'>
                     @csrf
                     <div class="input-box">

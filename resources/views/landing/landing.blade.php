@@ -43,14 +43,17 @@
                         <div class="User_option">
                             <li class="">
                                 <a class="mr-4" href="/">
-                                    Home
+                                    <strong>HOME</strong>
+                                </a>
+                                <a href={{ route('more') }}>
+                                    <strong>APARTMENTS</strong>
                                 </a>
 
                                 <a class="mr-4" href={{ route('about') }}>
-                                    About Us
+                                    <strong>ABOUT US</strong>
                                 </a>
                                 <a class="" href={{ route('contact') }}>
-                                    Contact
+                                    <strong>CONTACT</strong>
                                 </a>
                             </li>
                         </div>
@@ -73,6 +76,7 @@
                     <div id="myNav" class="overlay">
                         <div class="overlay-content">
                             <a href="/">HOME</a>
+                            <a href={{ route('more') }}>APARTMENTS</a>
                             <a href={{ route('about') }}>ABOUT</a>
                             <a href={{ route('contact') }}>CONTACT US</a>
                         </div>
